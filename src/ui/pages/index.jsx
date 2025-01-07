@@ -1,4 +1,5 @@
 import MusicList from "../components/data-display/MusicList/MusicList";
+import Timeline from "../components/inputs/Timeline/Timeline";
 
 const musics = [
     {
@@ -17,10 +18,13 @@ const musics = [
 
 export default function Index() {
     return (
-        <MusicList
-            musics={musics}
-            selectedMusic={musics[0]}
-            OnSelect={() => {}}
-        />
+        <div>
+            <MusicList
+                musics={musics}
+                selectedMusic={musics[0]}
+                OnSelect={() => {}}
+            />
+            <Timeline />
+        </div>
     )
 }

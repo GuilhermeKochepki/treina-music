@@ -1,3 +1,4 @@
+import { TimeService } from '../../../../data/services/TimeService'
 import styles from './MusicList.module.css'
 
 export default function MusicList (props) {
@@ -16,7 +17,7 @@ export default function MusicList (props) {
                     <div className={styles.information}>
                         <div className={styles.title}>{music.title}</div>
                         <div className={styles.artist}>{music.artist}</div>
-                        <div className={styles.time}>{music.time}</div>
+                        <div className={styles.time}>{TimeService.timeDisplay(music.time)}</div>
                     </div>
                 </li>
             ))}
